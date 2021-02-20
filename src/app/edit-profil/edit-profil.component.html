@@ -1,0 +1,14 @@
+<div class="col-md-6 user-container">
+  <h2 style="margin-top: 20px">Modifier le profil</h2>
+  <form [formGroup]="editProfilForm" (ngSubmit)="onSubmit()">
+    <div class="hidden">
+      <input type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id" hidden>
+    </div>
+    <div class="form-group">
+      <label for="nom">Nom Profil:</label>
+      <input type="text" formControlName="nom_profil" placeholder="Nom" name="nom" class="form-control" id="nom">
+    </div>
+    <button class="btn btn-success" style="width: 80px">Modifier</button>
+  </form>
+  <button class="btn btn-secondary" (click)="backToListProfil()" style="margin-top: 30px;width: 80px;margin-bottom: 20px">Profils</button>
+</div>

@@ -1,0 +1,34 @@
+<div class="col-md-6 user-container">
+  <h2 style="margin-top: 20px">Liste des vétements</h2>
+  <button class="btn btn-dark" (click)="addVetement()" style="margin-top: 30px;margin-bottom: 30px">Ajouter un vétement</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Titre</th>
+      <th>Description</th>
+      <th>Prix</th>
+      <th>Couleur</th>
+      <th>Nombre</th>
+      <th>Id Catégorie</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let vetement of vetements">
+      <td class="hidden">{{ vetement.id }}</td>
+      <td>{{ vetement.title }}</td>
+      <td>{{ vetement.description }}</td>
+      <td>{{ vetement.price }}</td>
+      <td>{{ vetement.color }}</td>
+      <td>{{ vetement.nbre }}</td>
+      <td>{{ vetement.id_cat }}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteVetement(vetement)">Supprimer</button>
+      </td>
+      <td>
+        <button class="btn btn-light" (click)="editVetement(vetement)" style="margin-left: 20px;">Modifier</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

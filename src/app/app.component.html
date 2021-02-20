@@ -1,0 +1,12 @@
+<div class="container align-self-center" style="border: 1px solid black;margin-top: 50px;border-radius: 10px">
+  <div class="row">
+    <div class="col col-md-3" style="background-color: #cccccc;border-radius: 10px 0px 0px 10px;">
+      <button class="btn" (click)="goToProfil()" style="margin-top: 30px">Profile</button>
+      <button class="btn" (click)="goToCategorie()">Catégorie</button>
+      <button class="btn" (click)="goToVetement()">Vétement</button>
+    </div>
+    <div class="col col-md-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

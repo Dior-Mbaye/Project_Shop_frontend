@@ -1,0 +1,26 @@
+<div class="col-md-6 user-container">
+  <h2 style="margin-top: 20px">Liste des profils</h2>
+  <button class="btn btn-dark" (click)="addProfil()" style="margin-top: 30px;margin-bottom: 30px">Ajout d'un Profil</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Nom</th>
+      <th>Supprimer</th>
+      <th>Modifier</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let profil of profils">
+        <td class="hidden">{{ profil.id }}</td>
+        <td>{{ profil.nom_profil }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteProfil(profil)">Supprimer</button>
+        </td>
+        <td>
+          <button class="btn btn-light" (click)="editProfil(profil)" style="margin-left: 20px;">Modifier</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

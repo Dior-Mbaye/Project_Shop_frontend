@@ -1,0 +1,17 @@
+<div class="col-md-6 user-container">
+  <h2 class="text-center">Add User</h2>
+  <form [formGroup]="addCategorieForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nom">Nom Catégorie:</label>
+      <input type="text" formControlName="nom_cat" placeholder="Nom" name="nom" class="form-control" id="nom">
+    </div>
+    <div class="form-group">
+      <label for="profil">Profil:</label>
+      <select class="form-control" formControlName="id_profil" id="profil">
+        <option *ngFor="let profil of profils" [value]="profil.id">{{profil.nom_profil}}
+        </option>
+      </select>
+    </div>
+    <button class="btn btn-success">Ajouter</button>
+  </form>
+</div>

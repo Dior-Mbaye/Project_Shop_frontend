@@ -1,0 +1,26 @@
+<div class="col-md-6 user-container">
+  <h2 style="margin-top: 20px">Liste des catégorie</h2>
+  <button class="btn btn-dark" (click)="addCategorie()" style="margin-top: 30px;margin-bottom: 30px">Ajouter un catégorie</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Nom</th>
+      <th>Supprimer</th>
+      <th>Modifier</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let categorie of categories">
+      <td class="hidden">{{ categorie.id }}</td>
+      <td>{{ categorie.nom_cat }}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteCategorie(categorie)">Supprimer</button>
+      </td>
+      <td>
+        <button class="btn btn-light" (click)="editCategorie(categorie)" style="margin-left: 20px;">Modifier</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
